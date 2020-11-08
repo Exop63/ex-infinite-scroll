@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 # ex-infinite-scroll
-İnfinite scroll without any scroll project for Angular cli
+Infinite scroll project for Angular cli
 =======
 # ExInfiniteScroll
 
