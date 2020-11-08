@@ -1,0 +1,47 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "ex-infinite-scroll": {
+      "projectType": "library",
+      "root": "projects/ex-infinite-scroll",
+      "sourceRoot": "projects/ex-infinite-scroll/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ex-infinite-scroll/tsconfig.lib.json",
+            "project": "projects/ex-infinite-scroll/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ex-infinite-scroll/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ex-infinite-scroll/src/test.ts",
+            "tsConfig": "projects/ex-infinite-scroll/tsconfig.spec.json",
+            "karmaConfig": "projects/ex-infinite-scroll/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ex-infinite-scroll/tsconfig.lib.json",
+              "projects/ex-infinite-scroll/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "defaultProject": "ex-infinite-scroll"
+}
