@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
 import { ExInfiniteScrollComponent } from './ex-infinite-scroll.component';
 import { ExInfiniteScrollConfig } from './ex-infinite-scroll.model';
@@ -7,6 +8,7 @@ import { ExInfiniteScrollConfig } from './ex-infinite-scroll.model';
 @NgModule({
   declarations: [ExInfiniteScrollComponent],
   imports: [
+    CommonModule
   ],
   exports: [ExInfiniteScrollComponent]
 })
